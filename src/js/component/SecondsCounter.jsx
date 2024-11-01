@@ -5,17 +5,14 @@ const SecondsCounter = ({ seconds }) => {
     <div className="Container-fluid fa-lg">
       <div className="row bg-dark text-white p-5 mx-auto">
         <div className="col">
-        <i className="fa-regular fa-clock"></i>
+          <i className="fa-regular fa-clock"></i>
         </div>
-        <div className="col">
-            0
-        </div>
-        <div className="col">0</div>
-        <div className="col">0</div>
-        <div className="col">0</div>
-        <div className="col">{Math.floor(seconds / 10) % 10}</div>
-        <div className="col">
-        {Math.floor(seconds / 1) % 10}</div>
+        <div className="col">{Math.floor(seconds / 600) % 10}</div>
+        <div className="col">{Math.floor(seconds / 60) % 10}</div>
+        <div className="col">{Math.floor(seconds / 600) % 10}</div>
+        <div className="col"> {Math.floor(seconds / 10 ) %10}</div>
+        <div className="col">{Math.floor(seconds /  1) % 10}</div>
+        <div className="col">{Math.floor(seconds /  1 ) % 10}</div>
       </div>
     </div>
   );
